@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/large_abstract_5"
+    android:padding="16dp"
+    tools:context=".KongruensiActivity">
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/ic_baseline_close_40"
+        android:drawableTint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <!--    Title    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_horizontal"
+            android:text="Kongruensi\nModulo"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <!--    Instruksi    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableLeft="@drawable/ic_baseline_error_16"
+            android:drawablePadding="8dp"
+            android:drawableTint="#33000000"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Masukkan bilangan kongruensi angka mod angka"
+            android:textColor="#33000000"
+            android:textSize="12sp" />
+
+        <!--    Inputan    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_angka"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text"
+                android:fontFamily="@font/firamono_regular"
+                android:hint="26 2 8"
+                android:inputType="number|text"
+                android:paddingHorizontal="16dp"
+                android:textColor="#605F5F"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:drawableLeft="@drawable/ic_left_border"
+                android:drawableTint="#B0D586"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:onClick="kongruensi"
+                android:paddingTop="8dp"
+                android:text="Hasil"
+                android:textColor="#B0D586"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!--    Output    -->
+        <TextView
+            android:id="@+id/tv_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/view_output"
+            android:fontFamily="@font/firamono_bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
