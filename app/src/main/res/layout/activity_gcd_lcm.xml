@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/large_abstract_1"
+    android:padding="16dp"
+    tools:context=".GcdLcmActivity">
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/ic_baseline_close_40"
+        android:drawableTint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <!--    Title    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_horizontal"
+            android:text="GCD &amp;\n LCM"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <!--    Instruksi    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableLeft="@drawable/ic_baseline_error_16"
+            android:drawablePadding="8dp"
+            android:drawableTint="#33000000"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Masukkan dua angka atau lebih"
+            android:textColor="#33000000"
+            android:textSize="12sp" />
+
+        <!--    Inputan    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_angka"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text"
+                android:fontFamily="@font/firamono_regular"
+                android:hint="21 93"
+                android:inputType="number|text"
+                android:paddingHorizontal="16dp"
+                android:textColor="#605F5F"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:drawableLeft="@drawable/ic_left_border"
+                android:drawableTint="#D4929E"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:onClick="gcdLcm"
+                android:paddingTop="8dp"
+                android:text="Hasil"
+                android:textColor="#D4929E"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!--    Output    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/view_output"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_gcd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:textColor="#B26A77"
+                android:textSize="20sp" />
+
+            <!--    Output GCD    -->
+            <TextView
+                android:id="@+id/tv_output_gcd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/firamono_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/tv_lcm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:textColor="#B26A77"
+                android:textSize="20sp" />
+
+            <!--    Output LCM    -->
+            <TextView
+                android:id="@+id/tv_output_lcm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/firamono_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
