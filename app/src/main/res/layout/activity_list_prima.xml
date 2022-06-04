@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/large_abstract_4"
+    android:padding="16dp"
+    tools:context=".ListPrimaActivity">
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/ic_baseline_close_40"
+        android:drawableTint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <!--    Title    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="List\nBilangan Prima"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+
+        <!--    Instruksi    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Masukkan dua angka untuk interval prima"
+            android:textColor="#33000000"
+            android:textSize="12sp"
+            android:drawableLeft="@drawable/ic_baseline_error_16"
+            android:drawableTint="#33000000"
+            android:drawablePadding="8dp" />
+
+        <!--    Inputan    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_angka"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:hint="20 90"
+                android:inputType="number|text"
+                android:background="@drawable/edit_text"
+                android:fontFamily="@font/firamono_regular"
+                android:textColor="#605F5F"
+                android:textSize="16dp" />
+
+            <TextView
+                android:onClick="listPrima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_left_border"
+                android:drawableTint="#FFADB3"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Hasil"
+                android:textColor="#FFADB3"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!--    Output    -->
+        <TextView
+            android:id="@+id/tv_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@drawable/view_output"
+            android:fontFamily="@font/firamono_bold"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="48sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
